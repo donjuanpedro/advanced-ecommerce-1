@@ -1,11 +1,14 @@
 import React from "react";
+import Counter from "./Counter";
 
 function ProductDetail(props) {
+
     let stars = [];
         for (let i = 0; i < props.product.rating; i++ ){
             let star = <span className="glyphicon glyphicon-star"/>;
             stars.push(star)
         };
+    
 
     return (
 
@@ -25,7 +28,9 @@ function ProductDetail(props) {
                                             </p>
                                         </div>
                                     </div>
-                                </div>);
+                                    <Counter numberOfItemsInCart={props.numberOfItemsInCart} />
+    
+            </div>)
 }
 
 export default ProductDetail;
