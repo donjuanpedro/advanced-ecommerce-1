@@ -8,7 +8,13 @@ import ProductDetail from './components/ProductDetail';
 import Footer from './components/Footer';
 import PropTypes from 'prop-types';
 
+
+
 function App(props) {
+
+    let productDetails = props.products.map((p) => <ProductDetail product = {p}/>);
+
+
     return (
       <div className="App">
      {/*<Header>*/}
@@ -31,7 +37,7 @@ function App(props) {
                 {/*</Carousel>*/}
                 <div className="row">
                     {/*<ProductDetail>*/}
-                    <ProductDetail product={props.product}/>
+                    {productDetails}
                     {/*</ProductDetail>*/}
                     {/* <div className="col-sm-4 col-lg-4 col-md-4">
                         <div className="thumbnail">

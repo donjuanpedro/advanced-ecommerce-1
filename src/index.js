@@ -10,6 +10,6 @@ const {
 
 ReactDOM.render(
   <App 
-  products={products}/>,
+  products={state.products}/>,
   document.getElementById('root')
 );
